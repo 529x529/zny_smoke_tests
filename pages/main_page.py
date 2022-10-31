@@ -57,4 +57,4 @@ class Main_page(Base):
 
     def select_hoodies_page(self):
         self.get_current_url()
-        self.click_login_page_button()
+        self.click_hoodies_page_button()
