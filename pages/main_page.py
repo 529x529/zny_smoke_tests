@@ -19,6 +19,7 @@ class Main_page(Base):
     zny_logo = "//a[@class='header__logo']"
     login_page_button = "//html/body/main/section[1]/div/header/nav/div[1]/ul[3]/li[1]/a"
     hoodies_page_button = "/html/body/header/nav/div[1]/ul[1]/li[3]/a"
+    cart_total_button = "//span[@id='cart-total']"
 
     # Getters
 
@@ -30,6 +31,9 @@ class Main_page(Base):
 
     def get_hoodies_page_button(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.hoodies_page_button)))
+
+    def get_cart_total_button(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.cart_total_button)))
 
     # Actions
 
@@ -44,6 +48,10 @@ class Main_page(Base):
     def click_hoodies_page_button(self):
         self.get_hoodies_page_button().click()
         print("Click hoodies page button")
+
+    def click_cart_total_button(self):
+        self.get_cart_total_button().click()
+        print("Click cart total button")
 
     # Methods
 
