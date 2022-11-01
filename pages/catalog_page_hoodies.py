@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from base.base_class import Base
 
 
-class Hoodies_page(Base):
+class Catalog_page_hoodies(Base):
 
 
     def __init__(self, driver):
@@ -14,16 +14,14 @@ class Hoodies_page(Base):
 
     #Locators
 
-    hoodie_stay_together = "//a[@href='http://znyworldwide.com/hoodies/ohd-togetheraw22-blk']"
+    hoodie_stay_together = "/html/body/main/section/div/section[2]/a"
 
     #Getters
 
     def get_hoodie_stay_together(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.hoodie_stay_together)))
 
-
     #Actions
-
 
     def click_hoodie_stay_together(self):
         self.get_hoodie_stay_together().click()

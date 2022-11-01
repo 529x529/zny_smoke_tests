@@ -4,9 +4,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from pages.hoodies_page import Hoodies_page
+from pages.catalog_page_hoodies import Catalog_page_hoodies
 from pages.login_page import Login_page
 from pages.main_page import Main_page
+from pages.product_size_page import Product_size_page
 
 
 def test_buy_hoodie_zny_together():
@@ -23,11 +24,13 @@ def test_buy_hoodie_zny_together():
 
     mp.select_hoodies_page()
 
-    hp = Hoodies_page(driver)
-    hp.select_hoodie_stay_together()
+    cph = Catalog_page_hoodies(driver)
+    cph.select_hoodie_stay_together()
 
+    psp = Product_size_page(driver)
+    psp.select_product_size_m()
 
-
+    mp.select_cart_total_page()
 
     print("Finish test")
     time.sleep(5)
