@@ -14,7 +14,7 @@ class Product_size_page(Base):
 
     #Locators
 
-    size_m_button = "//span[@class='product__size__name' and contains(text(),'M')]"
+    size_m_button = "//span[@class='product__size__name' and text() = 'XXL']"
     cart_button = "//button[@id='button-cart']"
 
     #Getters

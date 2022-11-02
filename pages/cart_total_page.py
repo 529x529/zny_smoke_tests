@@ -25,7 +25,7 @@ class Cart_total_page(Base):
 
     def click_checkout_button(self):
         self.get_checkout_button().click()
-        print("Click hoodie stay together")
+        print("Click checkout button")
 
     # Methods
 
