@@ -14,21 +14,21 @@ class Product_size_page(Base):
 
     #Locators
 
-    size_m_button = "//span[@class='product__size__name' and text() = 'XXL']"
+    size_xxl_button = "//span[@class='product__size__name' and text() = 'XXL']"
     cart_button = "//button[@id='button-cart']"
 
     #Getters
 
-    def get_size_button_m(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.size_m_button)))
+    def get_size_button_xxl(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.size_xxl_button)))
     def get_cart_button(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.cart_button)))
 
     #Actions
 
-    def click_size_button_m(self):
-        self.get_size_button_m().click()
-        print("Click size button M")
+    def click_size_button_xxl(self):
+        self.get_size_button_xxl().click()
+        print("Click size button XXl")
 
     def click_cart_button(self):
         self.get_cart_button().click()
@@ -36,7 +36,7 @@ class Product_size_page(Base):
 
     # Methods
 
-    def select_product_size_m(self):
+    def select_product(self):
         self.get_current_url()
-        self.click_size_button_m()
+        self.click_size_button_xxl()
         self.click_cart_button()

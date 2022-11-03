@@ -8,7 +8,8 @@ from pages.cart_total_page import Cart_total_page
 from pages.catalog_page_hoodies import Catalog_page_hoodies
 from pages.login_page import Login_page
 from pages.main_page import Main_page
-from pages.product_size_page import Product_size_page
+from pages.order_page import Order_page
+from pages.product_page import Product_size_page
 
 
 def test_buy_hoodie_zny_together():
@@ -29,12 +30,15 @@ def test_buy_hoodie_zny_together():
     cph.select_hoodie_stay_together()
 
     psp = Product_size_page(driver)
-    psp.select_product_size_m()
+    psp.select_product()
 
     mp.select_cart_total_page()
 
     ctp = Cart_total_page(driver)
     ctp.checkout()
+
+    op = Order_page(driver)
+    op.create_order()
 
     print("Finish test")
     time.sleep(5)
