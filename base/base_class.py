@@ -24,7 +24,7 @@ class Base():
     def get_screenshot(self):
         now_date = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M")
         name_screenshot = 'screenshot' + now_date + '.png'
-        self.driver.save_screenshot('/Users/mikhailrezchikov/main_project/screen/' + name_screenshot)
+        self.driver.save_screenshot('/Users/mikhailrezchikov/zny_smoke_tests/screens/' + name_screenshot)
 
     """ Method assert url """
 

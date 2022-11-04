@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -113,7 +115,7 @@ class Order_page(Base):
 
     def click_courier_delivery_radio_button(self):
         self.get_courier_delivery_radio_button().click()
-        print("Click courier cdek radio button")
+        print("Click courier delivery radio button")
 
     def click_payment_method_credit_card(self):
         self.get_payment_method_credit_card().click()
@@ -125,8 +127,9 @@ class Order_page(Base):
 
     #Methods
 
-    def create_order(self):
+    def create_order_payment_method_credit_card(self):
         self.get_current_url()
+        self.assert_url("https://znyworldwide.com/simplecheckout/")
         # self.input_customer_firstname("Ivan")
         # self.input_customer_lastname("Ivan")
         # self.input_customer_telephone("70000000000")
@@ -138,3 +141,6 @@ class Order_page(Base):
         self.click_courier_delivery_radio_button()
         self.click_payment_method_credit_card()
         self.click_create_order_button()
+        time.sleep(5)
+        self.get_screenshot()
+

@@ -14,21 +14,21 @@ class Catalog_page_hoodies(Base):
 
     #Locators
 
-    hoodie_stay_together = "/html/body/main/section/div/section[2]/a"
+    hoodie_1 = "/html/body/main/section/div/section[1]/a"
 
     #Getters
 
-    def get_hoodie_stay_together(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.hoodie_stay_together)))
+    def get_hoodie_1(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.hoodie_1)))
 
     #Actions
 
-    def click_hoodie_stay_together(self):
-        self.get_hoodie_stay_together().click()
-        print("Click hoodie stay together")
+    def click_hoodie_1(self):
+        self.get_hoodie_1().click()
+        print("Click hoodie 1")
 
     # Methods
 
-    def select_hoodie_stay_together(self):
+    def select_hoodie_1(self):
         self.get_current_url()
-        self.click_hoodie_stay_together()
+        self.click_hoodie_1()

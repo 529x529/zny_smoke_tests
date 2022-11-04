@@ -38,5 +38,4 @@ class Product_size_page(Base):
 
     def select_product(self):
         self.get_current_url()
-        self.click_size_button_xxl()
         self.click_cart_button()

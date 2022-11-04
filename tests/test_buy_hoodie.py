@@ -27,7 +27,7 @@ def test_buy_hoodie_zny_together():
     mp.select_hoodies_page()
 
     cph = Catalog_page_hoodies(driver)
-    cph.select_hoodie_stay_together()
+    cph.select_hoodie_1()
 
     psp = Product_size_page(driver)
     psp.select_product()
@@ -38,7 +38,7 @@ def test_buy_hoodie_zny_together():
     ctp.checkout()
 
     op = Order_page(driver)
-    op.create_order()
+    op.create_order_payment_method_credit_card()
 
     print("Finish test")
     time.sleep(5)
