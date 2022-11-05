@@ -12,27 +12,8 @@ https://znyworldwide.com/
 ```shell script
 ~ pip install --upgrade pip
 ```
-* Установите зависимости:
-```shell script
-~ pip install -r requirements.txt
-```
-* Создайте конфигурационный файл с данными для Google-авторизации в Intranet:
-```shell script
-~ nano configuration.yml
-```
-```
-intranet:
-  base_url: 'https://domain.com/team/members/'
-  user_email: ''
-  user_password: ''
-  
-```
 * Запустите тесты:
 ```shell script
 ~ python3 -m pytest -s -v
 ```
-* Arguments:
-```
-[--verbose]: increase verbosity
-[--html]: generate a HTML report for the test results
-```
+
