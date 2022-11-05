@@ -18,7 +18,7 @@ class Main_page(Base):
 
     zny_logo = "//a[@class='header__logo']"
     login_page_button = "//html/body/main/section[1]/div/header/nav/div[1]/ul[3]/li[1]/a"
-    hoodies_page_button = "/html/body/header/nav/div[1]/ul[1]/li[3]/a"
+    hoodies_page_button = "//span[text()='Худи / свитшоты']"
     cart_total_button = "//span[@id='cart-total']"
 
     # Getters

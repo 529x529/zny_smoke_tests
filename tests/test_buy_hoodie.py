@@ -12,10 +12,8 @@ from pages.order_page import Order_page
 from pages.product_page import Product_size_page
 
 
-def test_buy_hoodie_zny_together():
+def test_buy_hoodie_zny_together(set_up):
     driver = webdriver.Chrome(executable_path='/Users/mikhailrezchikov/PycharmProjects/resource/chromedriver')
-
-    print("Start Test")
 
     mp = Main_page(driver)
     mp.get_driver()
@@ -40,5 +38,4 @@ def test_buy_hoodie_zny_together():
     op = Order_page(driver)
     op.create_order_payment_method_credit_card()
 
-    print("Finish test")
-    time.sleep(5)
+    driver.quit()
