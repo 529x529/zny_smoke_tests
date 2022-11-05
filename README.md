@@ -1,5 +1,6 @@
-# Проект автоматизации интернет магазина 
-https://znyworldwide.com/
+# Автоматизации интернет магазина 
+
+Link - https://znyworldwide.com/
 
 
 ## How to use
