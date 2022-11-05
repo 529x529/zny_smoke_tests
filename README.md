@@ -1,5 +1,38 @@
 # Проект автоматизации интернет магазина 
 https://znyworldwide.com/
 
-Запустите тесты:
+
+## How to use
+* Установите [актуальную](https://chromedriver.chromium.org/downloads) версию ChromeDriver для вашего Chrome
+* Создайте виртуальное окружение и активируйте его:
+```shell script
+~ python3 -m venv env && source env/bin/activate
+```
+* Обновите pip до последней версии:
+```shell script
+~ pip install --upgrade pip
+```
+* Установите зависимости:
+```shell script
+~ pip install -r requirements.txt
+```
+* Создайте конфигурационный файл с данными для Google-авторизации в Intranet:
+```shell script
+~ nano configuration.yml
+```
+```
+intranet:
+  base_url: 'https://domain.com/team/members/'
+  user_email: ''
+  user_password: ''
+  
+```
+* Запустите тесты:
+```shell script
 ~ python3 -m pytest -s -v
+```
+* Arguments:
+```
+[--verbose]: increase verbosity
+[--html]: generate a HTML report for the test results
+```
