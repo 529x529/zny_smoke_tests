@@ -9,10 +9,6 @@ Link - https://znyworldwide.com/
 ```shell script
 ~ python3 -m venv env && source env/bin/activate
 ```
-* Обновите pip до последней версии:
-```shell script
-~ pip install --upgrade pip
-```
 * Запустите тесты:
 ```shell script
 ~ python3 -m pytest -s -v
