@@ -1,4 +1,6 @@
 import time
+
+import allure
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -11,8 +13,8 @@ from pages.main_page import Main_page
 from pages.order_page import Order_page
 from pages.product_page import Product_size_page
 
-
-def test_buy_hoodie_zny_together(set_up):
+@allure.description("Test buy hoodie 1")
+def test_buy_hoodie_1(set_up):
     driver = webdriver.Chrome(executable_path='/Users/mikhailrezchikov/PycharmProjects/resource/chromedriver')
 
     mp = Main_page(driver)

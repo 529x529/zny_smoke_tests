@@ -1,5 +1,6 @@
 import time
 
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -129,21 +130,22 @@ class Order_page(Base):
     #Methods
 
     def create_order_payment_method_credit_card(self):
-        Logger.add_start_step(method="create_order_payment_method_credit_card")
-        self.get_current_url()
-        self.assert_url("https://znyworldwide.com/simplecheckout/")
-        # self.input_customer_firstname("Ivan")
-        # self.input_customer_lastname("Ivan")
-        # self.input_customer_telephone("70000000000")
-        # self.select_country_id_russia()
-        # self.select_zone_id_moscow()
-        # self.input_shipping_address_city("Moscow")
-        # self.input_shipping_address_postcode("123123")
-        # self.input_shipping_address("Ivanovskaya street, 11")
-        self.click_courier_delivery_radio_button()
-        self.click_payment_method_credit_card()
-        self.click_create_order_button()
-        time.sleep(5)
-        self.get_screenshot()
-        Logger.add_end_step(url=self.driver.current_url, method="create_order_payment_method_credit_card")
+        with allure.step("Create order payment"):
+            Logger.add_start_step(method="create_order_payment_method_credit_card")
+            self.get_current_url()
+            self.assert_url("https://znyworldwide.com/simplecheckout/")
+            # self.input_customer_firstname("Ivan")
+            # self.input_customer_lastname("Ivan")
+            # self.input_customer_telephone("70000000000")
+            # self.select_country_id_russia()
+            # self.select_zone_id_moscow()
+            # self.input_shipping_address_city("Moscow")
+            # self.input_shipping_address_postcode("123123")
+            # self.input_shipping_address("Ivanovskaya street, 11")
+            self.click_courier_delivery_radio_button()
+            self.click_payment_method_credit_card()
+            self.click_create_order_button()
+            time.sleep(5)
+            self.get_screenshot()
+            Logger.add_end_step(url=self.driver.current_url, method="create_order_payment_method_credit_card")
 
