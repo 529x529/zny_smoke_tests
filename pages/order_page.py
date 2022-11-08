@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from base.base_class import Base
+from utilities.logger import Logger
 
 
 class Order_page(Base):
@@ -128,6 +129,7 @@ class Order_page(Base):
     #Methods
 
     def create_order_payment_method_credit_card(self):
+        Logger.add_start_step(method="create_order_payment_method_credit_card")
         self.get_current_url()
         self.assert_url("https://znyworldwide.com/simplecheckout/")
         # self.input_customer_firstname("Ivan")
@@ -143,4 +145,5 @@ class Order_page(Base):
         self.click_create_order_button()
         time.sleep(5)
         self.get_screenshot()
+        Logger.add_end_step(url=self.driver.current_url, method="create_order_payment_method_credit_card")
 

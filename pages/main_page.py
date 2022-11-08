@@ -4,6 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from base.base_class import Base
+from utilities.logger import Logger
 
 
 class Main_page(Base):
@@ -60,13 +61,19 @@ class Main_page(Base):
         self.driver.maximize_window()
 
     def select_login_page(self):
+        Logger.add_start_step(method="select_login_page")
         self.get_current_url()
         self.click_login_page_button()
+        Logger.add_end_step(url=self.driver.current_url, method="select_login_page")
 
     def select_hoodies_page(self):
+        Logger.add_start_step(method="select_hoodies_page")
         self.get_current_url()
         self.click_hoodies_page_button()
+        Logger.add_end_step(url=self.driver.current_url, method="select_hoodies_page")
 
     def select_cart_total_page(self):
+        Logger.add_start_step(method="select_cart_total_page")
         self.get_current_url()
         self.click_cart_total_button()
+        Logger.add_end_step(url=self.driver.current_url, method="select_cart_total_page")
