@@ -1,6 +1,5 @@
-# Автоматизация бизнес пути интернет магазина 
-
-Link - https://znyworldwide.com/
+# Автоматизация бизнес пути интернет магазина
+https://znyworldwide.com/ 
 
 
 ## How to use
