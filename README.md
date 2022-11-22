@@ -11,7 +11,6 @@ https://znyworldwide.com/
 * Запустите тесты:
 ```shell script
 ~ python3 -m pytest -s -v
-Для запуска с созданием отчета Allure ~ python3 -m pytest --alluredir=test_results
 
 ```
 
