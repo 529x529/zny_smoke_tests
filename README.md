@@ -10,7 +10,10 @@ https://znyworldwide.com/
 ```
 * Запустите тесты:
 ```shell script
-~ python3 -m pytest -s -v
+~  python3 -m pytest --alluredir=test_results/ 
+```
+* Для просмотра отчета allure:
+```shell script
+~  allure serve test_results/  
 
 ```
-
