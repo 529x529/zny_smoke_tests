@@ -12,7 +12,7 @@ https://znyworldwide.com/
 ```shell script
 ~  python3 -m pytest --alluredir=test_results/ 
 ```
-* Для просмотра отчета allure:
+* Для просмотра отчета Allure:
 ```shell script
 ~  allure serve test_results/  
 
